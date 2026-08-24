@@ -1,0 +1,6 @@
+# Stable, pinned. This course never leaves the host: no bare-metal target, no
+# nightly features, no emulator — a terminal game and `cargo test`. The whole
+# toolchain is `rustup default stable`, and that is the point: this is the
+# catalog's front door, and its floor is one install.
+[toolchain]
+channel = "stable"
