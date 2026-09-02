@@ -1,7 +1,7 @@
 # The learner-owned tree: a cargo workspace, so this course can grow PEERS.
 #
 # One member today — the game. The workspace exists anyway, for the same reason
-# rust-core's `db/` does (ratified there 2026-08-19): a second project — a solver,
+# rust-for-systems's `db/` does (ratified there 2026-08-19): a second project — a solver,
 # a stats tool, a later arc's artifact — is a SIBLING of the game, not a part of
 # it, and `lantern/lantern` would say the opposite. Naming the tree after the
 # crate would also break the moment the crate is renamed in Puneet's naming pass;

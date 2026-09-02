@@ -1,6 +1,6 @@
-# rust-start-starter
+# rust-for-beginners-starter
 
-The starter workspace for **Rust from Zero: Build a Word Game** — a
+The starter workspace for **Rust for Beginners: Build a Word Game** — a
 [SourceBoot](https://sourceboot.com) course that assumes **no programming
 experience at all**: a terminal, the patience to read what a compiler says, and
 nothing else. You build one real thing, lab by lab: a terminal word-guessing game
@@ -8,7 +8,7 @@ nothing else. You build one real thing, lab by lab: a terminal word-guessing gam
 when it is done.
 
 Already write code in some language? This course will feel slow to you — start at
-[rust-core](https://sourceboot.com) instead, which assumes a working developer and
+[rust-for-systems](https://sourceboot.com) instead, which assumes a working developer and
 zero Rust.
 
 This repo is exactly what a learner's workspace starts as: a plain cargo workspace
@@ -19,9 +19,9 @@ live on [sourceboot.com](https://sourceboot.com) and arrive through the `sboot`
 CLI, into a separate cache directory. A repo created from this template stays your
 code and nothing else, which is what makes it worth showing people.
 
-> Naming note: `rust-start-starter`, the course id `rust-start`, and the crate
-> name `lantern` are working names. They may be renamed before launch; GitHub
-> redirects renamed repos.
+> Renamed 2026-09-01 (was `rust-start-starter`, when the course id was `rust-start`). GitHub
+> redirects renamed repos, so a template link you already have keeps working. The
+> crate name `lantern` is unchanged.
 
 ## Use it
 
@@ -30,7 +30,7 @@ Two ways in; both give you the same tree.
 **With GitHub** — your game starts life as a private repo you own:
 
 ```sh
-gh repo create my-word-game --private --template sourceboot/rust-start-starter --clone
+gh repo create my-word-game --private --template sourceboot/rust-for-beginners-starter --clone
 cd my-word-game
 ```
 
@@ -44,17 +44,17 @@ sboot test 00-welcome         # fetches the lab's tests + grader, runs them, gra
 
 `sboot` recognises the repo by its `sboot.toml` and downloads each lab's tests on
 first use (`sboot where` prints where they live — outside this repo). Note: don't
-run `sboot start` inside the clone — that command creates a fresh `./rust-start/`
+run `sboot start` inside the clone — that command creates a fresh `./rust-for-beginners/`
 directory and refuses to write into a non-empty one. With the template you already
 have the tree, so you don't need it.
 
 **Without GitHub:**
 
 ```sh
-sboot start rust-start
+sboot start rust-for-beginners
 ```
 
-materialises this same tree into `./rust-start/`, no `gh` and no template involved
+materialises this same tree into `./rust-for-beginners/`, no `gh` and no template involved
 — make it a git repo whenever you like.
 
 ## What's in the tree
