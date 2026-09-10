@@ -4,3 +4,9 @@
 # catalog's front door, and its floor is one install.
 [toolchain]
 channel = "stable"
+# clippy is part of the grade from lab 01 on (each lab's `lint` run refuses the
+# handful of calls this course forbids — see .cargo/clippy.toml). rustup installs
+# a listed component the first time cargo runs here WHILE ONLINE; a `--profile
+# minimal` install done offline must run `rustup component add clippy` once, or
+# every cargo command in this folder fails, not just the lint (lab 00 says so).
+components = ["clippy"]

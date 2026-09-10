@@ -38,15 +38,15 @@ Then install `sboot` and work from inside the clone:
 
 ```sh
 curl -fsSL https://sourceboot.com/install.sh | sh
-export SBOOT_TOKEN=...        # from https://sourceboot.com/account
+sboot login                   # connects this machine, in your browser
 sboot test 00-welcome         # fetches the lab's tests + grader, runs them, grades
 ```
 
 `sboot` recognises the repo by its `sboot.toml` and downloads each lab's tests on
-first use (`sboot where` prints where they live — outside this repo). Note: don't
-run `sboot start` inside the clone — that command creates a fresh `./rust-for-beginners/`
-directory and refuses to write into a non-empty one. With the template you already
-have the tree, so you don't need it.
+first use (`sboot where` prints where they live — outside this repo). Running
+`sboot start rust-for-beginners` inside the clone is safe: it puts back anything
+that is missing and never touches a file you have edited. With the template you
+already have the tree, so you don't need it.
 
 **Without GitHub:**
 
@@ -54,8 +54,11 @@ have the tree, so you don't need it.
 sboot start rust-for-beginners
 ```
 
-materialises this same tree into `./rust-for-beginners/`, no `gh` and no template involved
-— make it a git repo whenever you like.
+materialises this same tree into `./word-game-sb/` — named after what you build
+rather than after the course — makes it a git repository and commits it, asking
+once for the name and email git stamps on your commits. No `gh` and no template
+involved; `--dir <name>` picks a different folder. When you want it on GitHub,
+`sboot repo` creates the private repo and pushes it.
 
 ## What's in the tree
 

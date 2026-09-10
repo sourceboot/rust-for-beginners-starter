@@ -4,12 +4,15 @@
 # either: the word is picked by puzzle number, which is what makes two players
 # able to race the same puzzle — and what makes every test deterministic.)
 #
-# `lantern` is a WORKING NAME (crate and binary both) — subject to Puneet's
-# naming pass. It is spelled out in exactly two places a rename must touch:
-# this file and `src/banner.rs` (`GAME_NAME`).
+# `lantern` is the name of the crate and of the binary, and it is spelled out in
+# exactly two places: this file and `src/banner.rs` (`GAME_NAME`).
 [package]
 name = "lantern"
 version = "0.1.0"
 edition = "2021"
+# No build script, ever: the line below turns cargo's build.rs auto-detection off,
+# so nothing of yours runs at compile time — the course's checks compile your
+# library and nothing else. Every lab's rubric pins that line (`<mod>.manifest`).
+build = false
 
 [dependencies]

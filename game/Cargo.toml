@@ -4,8 +4,8 @@
 # rust-for-systems's `db/` does (ratified there 2026-08-19): a second project — a solver,
 # a stats tool, a later arc's artifact — is a SIBLING of the game, not a part of
 # it, and `lantern/lantern` would say the opposite. Naming the tree after the
-# crate would also break the moment the crate is renamed in Puneet's naming pass;
-# `game/` stays true whatever the binary ends up called.
+# crate would also tie the folder to one binary; `game/` stays true whatever
+# lives under it.
 #
 # Standalone on purpose — a fresh clone of your repo builds, tests and PLAYS with
 # nothing but Rust (`cd game && cargo run`), no sboot required. This directory is
