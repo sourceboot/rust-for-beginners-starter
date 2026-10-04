@@ -8,16 +8,16 @@ nothing else. You build one real thing, lab by lab: a terminal word-guessing gam
 when it is done.
 
 Already write code in some language? This course will feel slow to you — start at
-[rust-for-systems](https://sourceboot.com) instead, which assumes a working developer and
-zero Rust.
+[Rust for Systems](https://sourceboot.com/courses/rust-for-systems) instead, which
+assumes a working developer and zero Rust.
 
 This repo is exactly what a learner's workspace starts as: a plain cargo workspace
 holding one library crate, `lantern`, with a module per lab — most of them empty
 files waiting for their lab, one of them (the word list) shipped complete. The
-lessons, the per-lab tests and the grader are deliberately **not** in here — they
-live on [sourceboot.com](https://sourceboot.com) and arrive through the `sboot`
-CLI, into a separate cache directory. A repo created from this template stays your
-code and nothing else, which is what makes it worth showing people.
+lessons and the grading are deliberately **not** in here — they live on
+[sourceboot.com](https://sourceboot.com), and `sboot test` checks your work. A repo
+created from this template stays your code and nothing else, which is what makes it
+worth showing people.
 
 > Renamed 2026-09-01 (was `rust-start-starter`, when the course id was `rust-start`). GitHub
 > redirects renamed repos, so a template link you already have keeps working. The
@@ -39,11 +39,10 @@ Then install `sboot` and work from inside the clone:
 ```sh
 curl -fsSL https://sourceboot.com/install.sh | sh
 sboot login                   # connects this machine, in your browser
-sboot test 00-welcome         # fetches the lab's tests + grader, runs them, grades
+sboot test 00-welcome         # checks your work on lab 00
 ```
 
-`sboot` recognises the repo by its `sboot.toml` and downloads each lab's tests on
-first use (`sboot where` prints where they live — outside this repo). Running
+`sboot` recognises the repo by its `sboot.toml`. Running
 `sboot start rust-for-beginners` inside the clone is safe: it puts back anything
 that is missing and never touches a file you have edited. With the template you
 already have the tree, so you don't need it.
@@ -66,12 +65,14 @@ involved; `--dir <name>` picks a different folder. When you want it on GitHub,
 game/                   the cargo workspace you own
   lantern/              the game you write, one lab at a time
     src/                a module per lab — banner, guess, rounds, words,
-                        score, tracker, game. All EMPTY until their lab;
+                        score, tracker, game. banner.rs ships its three
+                        constants, the rest are empty until their lab;
                         lib.rs declares each one as the labs tell you to
     src/wordlist.rs     the course word list — ships complete, never edited,
                         proven sound by its own test
     src/main.rs         the playable shell — grows a few lines every lab
-rust-toolchain.toml     pinned stable Rust — that is the whole toolchain
+.cargo/                 the course's build settings — shipped, never edited
+rust-toolchain.toml     the current stable Rust, plus its code checker, clippy
 sboot.toml              tells the sboot CLI which course this repo is for
 ```
 
@@ -99,8 +100,8 @@ build-test loop works on your machine, before you have written any Rust. `cargo
 run` prints a placeholder line until lab 01 puts your game's name on the screen.
 
 The first red you meet will be one the course walks you into: lab 01 has you write
-your first function and your first test, and lab 02 deliberately leads you to a
-compile error so you learn to read one with the lesson beside you. When something
+your first function and your first test, and leads you to two compile errors on
+purpose, so you learn to read one with the lesson beside you. When something
 turns red mid-lab, that is the course working, not this template failing.
 
 ## The course

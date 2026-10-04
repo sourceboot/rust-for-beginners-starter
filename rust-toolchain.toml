@@ -1,4 +1,5 @@
-# Stable, pinned. This course never leaves the host: no bare-metal target, no
+# The current stable Rust — a channel, not a pinned version: rustup follows each new
+# stable release. This course never leaves the host: no bare-metal target, no
 # nightly features, no emulator — a terminal game and `cargo test`. The whole
 # toolchain is `rustup default stable`, and that is the point: this is the
 # catalog's front door, and its floor is one install.
@@ -8,5 +9,6 @@ channel = "stable"
 # handful of calls this course forbids — see .cargo/clippy.toml). rustup installs
 # a listed component the first time cargo runs here WHILE ONLINE; a `--profile
 # minimal` install done offline must run `rustup component add clippy` once, or
-# every cargo command in this folder fails, not just the lint (lab 00 says so).
+# every cargo command in this folder fails, not just the lint (lab 00's
+# `welcome.clippy` hint says so; its Windows install line adds clippy itself).
 components = ["clippy"]
