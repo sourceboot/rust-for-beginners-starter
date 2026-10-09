@@ -53,8 +53,8 @@ already have the tree, so you don't need it.
 sboot start rust-for-beginners
 ```
 
-materialises this same tree into `./word-game-sb/` — named after what you build
-rather than after the course — makes it a git repository and commits it, asking
+materialises this same tree into `./sourceboot-rust-for-beginners/` — named after
+the course you typed — makes it a git repository and commits it, asking
 once for the name and email git stamps on your commits. No `gh` and no template
 involved; `--dir <name>` picks a different folder. When you want it on GitHub,
 `sboot repo` creates the private repo and pushes it.
